@@ -28,7 +28,7 @@
 
             var calendar = new FullCalendar.Calendar(calendarEl, {
                 plugins: [ 'interaction', 'dayGrid' ],
-                defaultDate: '2020-02-12',
+                defaultDate: new Date(),
                 editable: true,
                 eventLimit: true, // allow "more" link when too many events
                 events: [

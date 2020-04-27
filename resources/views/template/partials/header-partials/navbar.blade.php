@@ -1,4 +1,4 @@
-<div class="navbar navbar-default navbar-static-top" style="background: linear-gradient(90deg, rgba(2,0,36,1) 10%, rgba(22,4,80,1) 61%, rgba(110,31,46,1) 81%) !important;">
+<div class="navbar navbar-default navbar-static-top">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -7,15 +7,15 @@
                 <span class="icon-bar"></span>
             </button>
         </div>
-        <div class="navbar-collapse collapse ">
-            <ul class="nav navbar-nav center-block pull-left">
-                <li {{Route::is('presentation')?'class=active':''}}><a href="{{route('presentation')}}">PRESENTATION</a></li>
-                <li {{Route::is('magazine')?'class=active':''}}><a href="{{route('magazine')}}">MAGAZINE</a></li>
-                <li {{Route::is('formation')?'class=active':''}}><a href="{{route('formation')}}">FORMATION</a></li>
-                <li {{Route::is('communication')?'class=active':''}}><a href="{{route('communication')}}">MEDIA CITY</a></li>
-                <li {{Route::is('event')?'class=active':''}}><a href="{{route('event')}}" >EVENTS</a></li>
-                <li {{Route::is('business')?'class=active':''}}><a href="{{route('business')}}">BUSINESS</a></li>
-                <li><a href="#">CONTACT</a></li>
+        <div class="navbar-collapse collapse center-block">
+            <ul class="nav  navbar-nav content-center" style="width:100% !important;">
+                <li class="nav-item {{Route::is('presentation')?'active':''}} "><a class="nav-link" href="{{route('presentation')}}">PRESENTATION</a></li>
+                <li class="nav-item {{Route::is('magazine')?'active':''}}"><a class="nav-link" href="{{route('magazine')}}">MAGAZINE</a></li>
+                <li class="nav-item {{Route::is('formation')?'active':''}}"><a class="nav-link" href="{{route('formation')}}">FORMATION</a></li>
+                <li class="nav-item {{Route::is('communication')?'active':''}}"><a class="nav-link" href="{{route('communication')}}">MEDIA CITY</a></li>
+                <li class="nav-item {{Route::is('event')?'active':''}}"><a class="nav-link" href="{{route('event')}}" >EVENTS</a></li>
+                <li class="nav-item {{Route::is('business')?'active':''}}"><a class="nav-link" href="{{route('business')}}">BUSINESS</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">CONTACT</a></li>
                 
             </ul>
         </div>

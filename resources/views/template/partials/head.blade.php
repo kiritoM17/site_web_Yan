@@ -1,5 +1,5 @@
 <meta charset="utf-8">
-<title> @yield('page-title') | Site web name</title>
+<title> @yield('page-title') | MASSORA ACADEMIQUE</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="description" content="" />
 <!-- css -->

@@ -1,4 +1,4 @@
-<div class="top" style="background: linear-gradient(90deg, rgba(2,0,36,1) 10%, rgba(22,4,80,1) 61%, rgba(110,31,46,1) 81%) !important;">
+<div class="top">
     <div class="container">
         <div class="row">
             <div class="col-md-6">

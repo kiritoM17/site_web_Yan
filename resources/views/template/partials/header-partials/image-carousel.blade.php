@@ -1,4 +1,4 @@
-<section id="featured" class="bg" style="background: linear-gradient(90deg, rgba(2,0,36,1) 10%, rgba(22,4,80,1) 61%, rgba(110,31,46,1) 81%) !important;">
+<section id="featured" class="bg hidden-xs">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -6,27 +6,19 @@
                 <div id="main-slider" class="main-slider flexslider">
                     <ul class="slides">
                         <li>
-                            <img src="{{url('img/slides/flexslider/1.jpg')}}" alt="" />
+                            <img src="{{url('img/slides/flexslider/atlantaa.JPG')}}" alt="" />
                             <div class="flex-caption">
-                                <h3>Modern Design</h3>
-                                <p>Duis fermentum auctor ligula ac malesuada. Mauris et metus odio, in pulvinar urna</p>
-                                <a href="#" class="btn btn-theme">Learn More</a>
+                                <h3>{{ Route::is('formation')?'Formation - Certification':'' }}</h3>
+                                <p>{{ Route::is('formation')?'Formation - Certification en création de la valeur ajoutée (V.A.)':'' }}</p>
+                                <a href="{{ Route::is('formation')?'document/formation/formulaire_inscription.docx':'#' }}" target="_blanc" class="btn btn-theme">{{Route::is('formation')?'Télécharger la fiche d\'inscription':''}}</a>
                             </div>
                         </li>
                         <li>
-                            <img src="img/slides/flexslider/2.jpg" alt="" />
+                            <img src="{{ url('img/slides/flexslider/gala.JPG') }}" alt="" />
                             <div class="flex-caption">
-                                <h3>Fully Responsive</h3>
-                                <p>Sodales neque vitae justo sollicitudin aliquet sit amet diam curabitur sed fermentum.</p>
-                                <a href="#" class="btn btn-theme">Learn More</a>
-                            </div>
-                        </li>
-                        <li>
-                            <img src="img/slides/flexslider/3.jpg" alt="" />
-                            <div class="flex-caption">
-                                <h3>Clean & Fast</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit donec mer lacinia.</p>
-                                <a href="#" class="btn btn-theme">Learn More</a>
+                                <h3>{{ Route::is('formation')?'Formation - Certification':'' }}</h3>
+                                <p>{{ Route::is('formation')?'Formation - Certification en Multi Level Marketing (MLM)':'' }}</p>
+                                <a href="{{ Route::is('formation')?'#':'#' }}" class="btn btn-theme">{{ Route::is('formation')?'Télécharger Sylabus':'' }}</a>
                             </div>
                         </li>
                     </ul>

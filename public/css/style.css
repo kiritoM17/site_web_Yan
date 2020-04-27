@@ -27,7 +27,7 @@ body {
   font-size: 14px;
   font-weight: 300;
   line-height: 1.6em;
-  color: #656565;
+  color: #cac4c4 !important;
 }
 
 a:active {
@@ -47,7 +47,7 @@ h6 {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   line-height: 1.1em;
-  color: #666;
+  color: #fff;
   margin-bottom: 20px;
 }
 
@@ -78,7 +78,6 @@ h6 {
   overflow: hidden;
   margin: 0 auto;
   padding: 0;
-  background: #fff;
 }
 
 .row,
@@ -151,7 +150,6 @@ header .top .row {
 header .top {
   padding: 1px 0;
   margin: 0;
-  background: #f2f2f2;
 }
 
 header .top {
@@ -217,7 +215,6 @@ header .top ul.social-network li a {
   right: 0;
   border: none;
   outline: none;
-  background: #fff;
   width: 50%;
   height: 36px;
   margin: 0;
@@ -298,7 +295,6 @@ header .top ul.social-network li a {
 
 .sb-search.sb-search-open .sb-icon-search,
 .no-js .sb-search .sb-icon-search {
-  background: #666;
   color: #fff;
   z-index: 11;
 }
@@ -335,7 +331,6 @@ header .navbar-collapse ul.navbar-nav {
 }
 
 header .navbar-default {
-  background-color: #fff;
   border-bottom: 1px solid #ddd;
 }
 
@@ -376,7 +371,7 @@ header .navbar-nav > li {
 header .navbar-nav > li > a {
   padding-bottom: 1px;
   padding-top: 1px;
-  margin-left: 40px;
+  margin-left: 0px;
   line-height: 30px;
   font-weight: 700;
   -webkit-transition: all 0.3s ease;
@@ -384,6 +379,9 @@ header .navbar-nav > li > a {
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+}
+header .navbar-collapse > ul.navbar-navm > li.nav-item {
+  border: 3px inset #ffffff !important;
 }
 
 header .nav .caret {
@@ -393,12 +391,10 @@ header .nav .caret {
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-  background-color: #fff;
 }
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
-  background-color: #fff;
 }
 
 .dropdown-menu {
@@ -441,10 +437,16 @@ header ul.nav li {
 }
 
 header ul.nav li a {
-  font-size: 12px;
+  font-size: 14px;
   border: none;
-  font-weight: 400;
+  font-weight: 700;
   text-transform: uppercase;
+}
+
+header ul.nav li {
+  border: 3px inset #ffffff;
+  margin: 3px !important;
+  padding: 4px !important;
 }
 
 header ul.nav li ul li a {
@@ -466,7 +468,6 @@ header ul.nav li ul li a {
 .dropdown-submenu:hover > a,
 .dropdown-menu .active > a,
 .dropdown-menu .active > a:hover {
-  background: #f5f5f5;
 }
 .navbar .nav a:hover {
   background: none;
@@ -480,7 +481,7 @@ header ul.nav li ul li a {
 
 .navbar .nav > .active > a:active,
 .navbar .nav > .active > a:focus {
-  background: none;
+  color: #6e1f2e;
   outline: 0;
   font-weight: 700;
 }
@@ -581,7 +582,6 @@ header ul.nav li ul li.dropdown-submenu li a {
 
 #featured {
   width: 100%;
-  background: #fcfcfc;
   position: relative;
   margin: 0;
   padding: 0;
@@ -1947,7 +1947,6 @@ ul.time-post li.time {
 ================================ */
 
 footer {
-  background: #f2f2f2;
 }
 #sub-footer {
   border-top: 1px solid #ddd;
@@ -2104,7 +2103,7 @@ section.demogrid .col-lg-12.nest {
   height: 32px;
   bottom: 0px;
   right: 20px;
-  background: #222;
+  background: rgba(2, 0, 36, 1) 10% !important;
   -webkit-border-radius: 2px 2px 0 0;
   -moz-border-radius: 2px 2px 0 0;
   border-radius: 2px 2px 0 0;
@@ -2340,7 +2339,6 @@ article .align-right {
     margin: 2px 0 0;
     font-size: 13px;
     list-style: none;
-    background-color: #fff;
     background-clip: padding-box;
     border: 1px solid #f5f5f5;
     border: 1px solid rgba(0, 0, 0, 0.15);

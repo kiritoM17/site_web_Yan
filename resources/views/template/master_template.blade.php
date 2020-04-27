@@ -3,12 +3,12 @@
 <head>
     @include('template.partials.head')
 </head>
-<body style="background: linear-gradient(90deg, rgba(2,0,36,1) 10%, rgba(22,4,80,1) 61%, rgba(110,31,46,1) 81%) !important;">
+<body style="padding:2% !important ;background: linear-gradient(90deg, rgba(2,0,36,1) 10%, rgba(22,4,80,1) 61%, rgba(110,31,46,1) 81%) !important;">
 <div id="wrapper">
     <!-- start header -->
 @include('template.partials.header')
 <!-- end header -->
-    <section id="main-content" style="padding: 1% !important; width: 100%;height: 100%;background: linear-gradient(90deg, rgba(2,0,36,1) 10%, rgba(22,4,80,1) 61%, rgba(110,31,46,1) 81%) !important;;box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.25);cursor: pointer">
+    <section id="main-content" style="padding: 1% !important; width: 100%;height: 100%;box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.25);cursor: pointer">
         <div class="row">
             <!-- left menu-->
         @include('template.partials.left_menu')
