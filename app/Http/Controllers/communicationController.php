@@ -11,4 +11,9 @@ class communicationController extends Controller
     {
         return view('communication');
     }
+    //function return communication admin index page
+    function getAdminPage()
+    {
+        return view('adminView.layouts.media_city.index');
+    }
 }

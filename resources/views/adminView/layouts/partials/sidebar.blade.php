@@ -24,20 +24,46 @@
                     <li>
                         <a class="menu-toggle" href="javascript:void(0);">
                             <i class="material-icons">art_track</i>
-                            <span> Gestion Actualitees </span>
+                            <span> Manage Rubrique content</span>
                         </a>
                         <ul class="ml-menu">
-                            <li {{Route::is('actualite')? 'class=active':''}}>
-                                <a href="{{route('actualite')}}">
-                                    <span>Actualitees </span>
+                            <li {{ Route::is('business-admin')?'class=active':'' }}>
+                                <a href="{{ route('business-admin') }}">
+                                    <span>Business</span>
                                 </a>
                             </li>
-                            <li {{Route::is('rubrique')? 'class=active':''}}>
-                                <a href="{{route('rubrique')}}">
-                                    <span> Rubrique </span>
+                            <li {{Route::is('actualite')? 'class=active':''}}>
+                                <a href="{{route('actualite')}}">
+                                    <span>Event</span>
+                                </a>
+                            </li>
+                            <li {{Route::is('admin-formation')? 'class=active':''}}>
+                                <a href="{{route('admin-formation')}}">
+                                    <span>Formation</span>
+                                </a>
+                            </li>
+                            <li {{Route::is('admin-magazine')? 'class=active':''}}>
+                                <a href="{{ route('admin-magazine') }}">
+                                    <span>Magazine</span>
+                                </a>
+                            </li>
+                            <li {{Route::is('admin-media-city')? 'class=active':''}}>
+                                <a href="{{ route('admin-media-city') }}">
+                                    <span>Media-City</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span>Presentation</span>
                                 </a>
                             </li>
                         </ul>
+                    </li>
+                    <li {{Route::is('publication')? 'class=active':''}}>
+                        <a href="{{route('publication')}}">
+                            <i class="material-icons">perm_media</i>
+                            <span>Manage Publication</span>
+                        </a>
                     </li>
                     <li {{Route::is('album-medias')? 'class=active':''}}>
                         <a href="{{route('album-medias')}}">
@@ -57,10 +83,10 @@
             <!-- Footer -->
             <div class="legal">
                 <div class="copyright">
-                    &copy; {{date('Y')}} <a href="javascript:void(0);">JADD Cameroun</a>.
+                    <a href="javascript:void(0);">All Rigths Reserved Massora Group LLC. USA</a>.
                 </div>
                 <div class="version">
-                    <b>Version: </b> 1.0.0
+                    <center><b>Version: </b> 1.0.0</center>
                 </div>
             </div>
             <!-- #Footer -->

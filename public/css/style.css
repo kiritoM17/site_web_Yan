@@ -50,7 +50,29 @@ h6 {
   color: #fff;
   margin-bottom: 20px;
 }
+.nav-item {
+  width: 152px !important;
+  margin-right: 3px !important;
+  margin-left: 3px !important;
+  border-radius: 15px;
+}
+.car-img {
+  width: 100% !important;
+  height: 300px !important;
+}
 
+.nav-link {
+  text-align: center;
+  font-size: 13px !important;
+}
+@media only screen and (max-width: 320px) {
+  .nav-item {
+    width: 100% !important;
+  }
+  .car-img {
+    height: 200px !important;
+  }
+}
 .highlight {
   color: #fff !important;
   padding: 0 8px;
@@ -331,7 +353,6 @@ header .navbar-collapse ul.navbar-nav {
 }
 
 header .navbar-default {
-  border-bottom: 1px solid #ddd;
 }
 
 header .nav li a:hover,

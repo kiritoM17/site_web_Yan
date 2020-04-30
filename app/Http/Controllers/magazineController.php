@@ -11,4 +11,9 @@ class magazineController extends Controller
     {
         return view('magazine');
     }
+    //function return magazine admin index page
+    function getAdminPage()
+    {
+        return view('adminView.layouts.magazine.index');
+    }
 }

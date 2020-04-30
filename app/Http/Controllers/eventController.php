@@ -11,4 +11,9 @@ class eventController extends Controller
     {
         return view('event');
     }
+    //function return event admin page
+    function getAdminPage()
+    {
+        return view('adminView.layouts.event.index');
+    }
 }

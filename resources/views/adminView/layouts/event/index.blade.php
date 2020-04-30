@@ -1,7 +1,7 @@
 @extends('adminView.index')
 
 @section('title')
-    Actualite & Evenement
+    Manage Event
 @endsection
 
 @section('extra-css')
@@ -210,7 +210,7 @@
                         <i class="material-icons">border_color</i>
                     </div>
                     <div class="content">
-                        <div class="text"><h4>New Event</h4></div>
+                        <div class="text"><h4>Create new event</h4></div>
                         <div class="number count-to" data-from="0" data-to="100" data-speed="1000" data-fresh-interval="20"></div>
                     </div>
                 </div>
@@ -235,7 +235,7 @@
                     </div>
                     <div class="modal-body">
                         <form  method="POST" action="actualite/store" enctype="multipart/form-data">
-                            @include('adminView.layouts.actualite.partials.createEventForm')
+                            @include('adminView.layouts.event.partials.createEventForm')
                             <div class="modal-footer">
                                 <button type="submit" class="btn btn-link waves-effect btn-primary" style="color: whitesmoke !important">SAVE CHANGES</button>
                                 <button type="button" class="btn btn-link waves-effect btn-danger" style="color: whitesmoke !important" data-dismiss="modal">CLOSE</button>

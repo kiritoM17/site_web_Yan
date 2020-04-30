@@ -11,4 +11,8 @@ class businessController extends Controller
     {
         return view('business');
     }
+    function getAdminPage()
+    {
+        return view('adminView.layouts.business.index');
+    }
 }

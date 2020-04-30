@@ -1,7 +1,7 @@
 @extends('adminView.index')
 
 @section('title')
-    Actualite & Evenement
+    Manage Publication
 @endsection
 
 @section('extra-css')
@@ -210,7 +210,7 @@
                         <i class="material-icons">border_color</i>
                     </div>
                     <div class="content">
-                        <div class="text"><h4>New Event</h4></div>
+                        <div class="text"><h4>New Publication</h4></div>
                         <div class="number count-to" data-from="0" data-to="100" data-speed="1000" data-fresh-interval="20"></div>
                     </div>
                 </div>

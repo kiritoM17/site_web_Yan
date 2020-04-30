@@ -1,4 +1,4 @@
-<div class="col-lg-4 col-md-4 col-sm-5 floatleft hidden-sm hidden-xs" style="font-family: 'Yatra One', cursive; padding: 1.5% !important;border-right: 4px outset #fff;                                                                                                                                  border-radius: 0px 6px 0px 0px;">
+<div class="col-lg-4 col-md-4 col-sm-5 col-xs-12 floatleft hidden-sm hidden-xs" style="font-family: 'Yatra One', cursive; padding: 1.5% !important;border-right: 4px outset #fff;                                                                                                                                  border-radius: 0px 6px 0px 0px;">
     <h5 class="widgetheading">Latest posts</h5>
     <!-- contenu -->
     <ul class="recent">
