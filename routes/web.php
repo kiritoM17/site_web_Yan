@@ -37,4 +37,58 @@ Route::group([], function()
     Route::get('formation',['as'=>'formation','uses'=>'formationController@getPage']);
     Route::get('event',['as'=>'event','uses'=>'eventController@getPage']);
     Route::get('magazine',['as'=>'magazine','uses'=>'magazineController@getPage']);
+    Route::get('contact',['as'=>'contact','uses'=>'contactController@getPage']);
+});
+
+//media route
+Route::group(['prefix'=>'media' ], function()
+{
+    Route::post('delete','MediaControler@destroy');
+    Route::post('store','MediaControler@store');
+    Route::post('storeRegisterForm','MediaControler@storeRegisterForm');
+    Route::post('storeSyllabus','MediaControler@storeSyllabus');
+    Route::get('getMediaById','MediaControler@getMediaById');
+});
+//album routes
+Route::group(['prefix'=>'album' ], function()
+{
+    Route::post('store','AlbumController@store');
+    Route::post('delete','AlbumController@destroy');
+    Route::post('update','AlbumController@update');
+    Route::get('getImageAlbumAdmin/{id}','AlbumController@getImageAlbumAdmin');
+    Route::get('getImageAlbumPublic/{id}','AlbumController@getImageAlbumPublic');
+    Route::get('getImageAlbumPublicVideo/{id}','AlbumController@getImageAlbumPublicVideo');
+    Route::get('getParentImage/{id}','AlbumController@getParentImage');
+    Route::get('getParentVideo/{id}','AlbumController@getParentVideo');
+});
+//publication Route
+Route::group(['prefix'=>'publication'],function()
+{
+    Route::post('store','publicationController@store');
+    Route::post('destroy','publicationController@destroy');
+    Route::post('updateGereralPublication','publicationController@updateGeneralPublication');
+    Route::post('updateEventPublication','publicationController@updateEventPublication');
+    Route::post('updateFormationPublication','publicationController@updateFormationPublication');
+    Route::get('allPublicationMagazineNumber','publicationController@allPublicationMagazineNumber');
+    Route::get('allPublicationBusinessNumber','publicationController@allPublicationBusinessNumber');
+    Route::get('allPublicationMediaCityNumber','publicationController@allPublicationMediaCityNumber');
+    Route::get('allPublicationFormationNumber','publicationController@allPublicationFormationNumber');
+    Route::get('allPublicationEventNumber','publicationController@allPublicationEventNumber');
+    Route::get('getById/{id}','publicationController@getById');
+});
+
+
+Route::group(['prefix'=>'event'],function()
+{
+    Route::get('getRecentEvent','eventController@getRecentEvent');
+});
+
+Route::group(['prefix'=>'contact'],function()
+{
+    Route::post('store','contactController@store');
+});
+
+Route::group(['prefix'=>'actualite'],function()
+{
+    Route::get('getActualiteAdminById/{id}','publicationController@getActualiteAdminById');
 });

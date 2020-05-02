@@ -2,65 +2,189 @@
 @section('page-title')
     Formation
 @endsection
+@section('custom-css')
+  <style>
+ body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+}
+
+.main_card {
+	color: rgb(36, 8, 75);
+	width: 100%;
+	height: 413px;
+	margin: 1px auto;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+    max-width: 100%;
+    padding: 13% !important;
+    background: linear-gradient(90deg, rgba(212,211,211,1) 7%, rgba(218,210,210,1) 20%, rgba(238,237,237,1) 45%, rgba(221,215,216,1) 77%);
+}
+
+.card_left {
+	width: 90%;
+}
+
+.card_datails {
+	width: 90%;
+	padding: 5px;
+	margin-top: -25px;
+}
+.card_datails  h1 {
+    font-size: 19px;
+    color:rgb(2, 0, 36);
+}
+.card_datails  h3 {
+    font-size: 16px;
+    color:rgb(2, 0, 36);
+}
+.card_right img {
+	height: 300px;
+	border-radius: 2px;
+}
+.card_right {
+	border-radius: 2px;
+}
+
+.card_cat {
+	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+
+.PG, .year, .genre, .time {
+	color: rgb(23, 4, 79);
+	padding: 1px;
+	font-weight: bold;
+	border-radius: 1px !important;
+}
+
+.PG {
+}
+
+.disc {
+	font-weight: 100;
+	line-height: 27px;
+}
+a {
+	color: darkcyan;
+	display: block;
+	text-decoration: none;
+}
+.social-btn {
+	margin-left: -10px;
+}
+button {
+	color: #fff;
+    width:150px !important;
+	border: none;
+	padding: 20px;
+	outline: none;
+	font-size: 12px;
+	margin-top: 30px;
+	margin-left: 10px;
+	background: rgb(110, 31, 46);
+	border-radius: 12px;
+	-webkit-box-shadow: 0 0 20px rgba(0,0,0,0.2);
+	        box-shadow: 0 0 20px rgba(0,0,0,0.2);
+	-webkit-transition: 300ms ease-in-out;
+	-o-transition: 200ms ease-in-out;
+	transition: 200ms ease-in-out;
+}
+
+button:hover {
+    color: #fff;
+	-webkit-transform: scale(1.1);
+	    -ms-transform: scale(1.1);
+	        transform: scale(1.1);
+}
+  </style>
+@endsection
 @section('content-page')
     <div class="row">
-        <div class="col-sm-4 col-xs-12 img-responsive">
-            <img src="{{url('img/clients/logo2.png')}}" class="img-responsive album" style="width: 100%; height: 200px;">
-        </div>
-        <div class="col-sm-8">
-            <div class="row">
-                <div class="col-sm-12 center-block" style="float: none">
-                    <h4 style="font-family: 'Satisfy', cursive;border-bottom: 0px solid;margin-bottom: 0px;margin-bottom: 3%" class="text-center"> Formation - Certification en création de la valeur ajoutée (V.A.) et Multi
-                        Level Marketing (MLM)
-                        </h4>
+        <div class="wrapper">
+            @if (count($formation)>0)
+            @foreach ($formation as $pub)
+            @if ($pub->status_pub !== 'delete')
+            <div class="main_card">
+                <div class="card_left">
+                    <div class="card_datails">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-12">
+                                <h1 class="" style="width: 450px !important;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;padding: 2px 5px;">THEME: {{ $pub->theme_pub }}</h1>
+                                <h3 style="width: 450px !important;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;padding: 2px 5px;">Edition N*: <span class="badge badge-success">{{ $pub->edition_pub }}</span></h3>
+                        </div>
+                        </div>
+                        <div class="card_cat hidden-xs">
+                            <p class="PG"><span class="badge badge-success"><i class="fa fa-calendar" style="font-size:15px"></i></span></p>
+                            <p class="year"><span class="badge badge-success">{{ $pub->start_date_pub->format('d-M-Y') }}</span></p>
+                            <p class="year"><span class="badge badge-success">Start Formation</span></p>
+                        </div>
+                        <h1 style="font-size:20px !important" class="disc">{!! $pub->title_pub!!}</h1>
+                        <a href="https://www.imdb.com/title/tt4912910/" target="_blank" class="btn btn-xs btn-default">Read More</a>
+                    <div class="social-btn">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <button class="btn btn-xs">
+                                <a  class="btn btn-xs" href="
+                                @foreach($pub->albums->medias as $media)
+                                 @if($media->mime_type =='registerForm')
+                                 {{asset('storage/'.$media->nom_media)}}
+                                 @break
+                                 @endif
+                                @endforeach
+                                    
+                                    " class="btn btn-xs">
+                                    <i class="fas fa-play"></i> Register Form
+                                </a>
+                            </button>
+
+                            </div>
+                            <div class="col-xs-6">
+                                <button class="btn btn-xs">
+                                    <a target="_blank" class="btn btn-xs" href="
+                                    @foreach($pub->albums->medias as $media)
+                                     @if($media->mime_type =='syllabus')
+                                     {{asset('storage/'.$media->nom_media)}}
+                                     @break
+                                     @endif
+                                    @endforeach
+                                        
+                                         ">
+                                        <i class="fas fa-play"></i> Syllabus
+                                    </a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>	
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12 center-block description-act" style="font-size: 14px !important;">
-                    <p>
-                        Créer de la valeur ajoutée, la développer et la dynamiser durant plusieurs cycles de vie ne s'apprend pas
-                        dans les programmes académiques officiels. Il en est de même des véritables réseaux dynamiques de
-                        fonctionnement. C’est un vide présent dans les programmes académiques de pratiquement tous les pays au
-                        monde.
-                    </p>
-                    <p>
-                                                    Après plusieurs années de travail et de recherches, un groupe de professionnels et de chefs d'Entreprises a
-                            ainsi mis sur pieds une formation unique au monde, un court programme de formation très indispensable
-                            à toutes les entreprises, organisations et personnes physiques.
-                            La formation qui est une certification en 3 mois se déroule numériquement avec des travaux pratiques et
-                            une graduation au terme. Cette formation est destinée aux membres des organisations et aux autres
-                            personnes physiques indépendantes (étudiants, travailleurs, etc.) qui désirent évoluer à leurs propres
-                            comptes.
-                    </p>
-                    <p>
-                                                Aucun diplôme n'est exigé mais au préalable un simple test en ligne est obligatoire avant toute
-                        inscription à cette certification.
-                        Au terme de la formation, un certificat international est délivré aux récipiendaires avec de grandes
-                        perspectives.
-                    </p>
-                    <p>
-                        le programme les conquérant c'est :
-                    </p>
-                    <p>
-                        <ul>
-                            <li>Une Certification professionnelle américaine en français, unique au monde</li>
-                            <li>Une opportunité pour tous (étudiants, employés, hauts cadres et responsable
-                                d’entreprise et d’organisation, etc.) de se faire former en trois mois par les praticiens
-                                du management et du MLM (C.E.O., General Manager, Enseignants chevronnés
-                                possédant des Entreprises, Etc.)</li>
-                                <li>Une formation extraordinaire conçue et destinée aux visionnaires</li>
-                                <li>Un programme de trois mois de formation pratique en ligne ouvert à tous les
-                                    francophones avec ou sans diplômes
-                                </li>
-                        <li>Une opportunité pour les Entreprises de booster leurs ressources humaines</li>
-                        </ul>
+                <div class="card_right">
+                    <div class="img_container">
+                        <img class=" thumbnail" src="@if(count($pub->albums->medias)>0){{asset('storage/'.$pub->albums->medias[0]->nom_media)}}@endif" style="width: 100% !important; height: 300px !important;">
+                     </div>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4 floatright center-block">
-                    <p style="color:#fff ;font-size:9px!important;"><span style="text-decoration: #fff underline;font-weight: bold !important;">Publier le :</span>  22 Jan 2035</p>
-                </div>
-            </div>
+            @endif
+                @endforeach
+                @endif
         </div>
     </div>
+@endsection
+@section('custom-script')
+<script>
+    $(".profile").addClass("pre-enter");
+setTimeout(function () {
+	$(".profile").addClass("on-enter");
+}, 500);
+setTimeout(function () {
+	$(".profile").removeClass("pre-enter on-enter");
+}, 3000);
+
+</script>
 @endsection

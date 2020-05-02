@@ -52,11 +52,6 @@
                                     <span>Media-City</span>
                                 </a>
                             </li>
-                            <li>
-                                <a href="">
-                                    <span>Presentation</span>
-                                </a>
-                            </li>
                         </ul>
                     </li>
                     <li {{Route::is('publication')? 'class=active':''}}>

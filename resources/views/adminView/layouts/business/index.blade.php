@@ -205,11 +205,8 @@
         <div class="row clearfix">
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6" data-toggle="modal" data-target="#addActualite">
                 <div class="info-box bg-deep-orange hover-expand-effect">
-                    <div class="icon">
-                        <i class="material-icons">border_color</i>
-                    </div>
                     <div class="content">
-                        <div class="text"><h4>Create new Business</h4></div>
+                        <div class="text"><h4>Manage Business Publication</h4></div>
                         <div class="number count-to" data-from="0" data-to="100" data-speed="1000" data-fresh-interval="20"></div>
                     </div>
                 </div>
@@ -224,6 +221,8 @@
         <!-- #END# Widgets -->
         <!-- Vue -->
         <hr style="color: #0b0b0b;background-color: #0b0b0b">
+        @include('adminView.layouts.business.partials.card-list')
+
 
         <!-- Modal content here-->
         <div class="modal fade" id="addActualite" tabindex="-1" role="dialog">
@@ -263,29 +262,22 @@
           });
     </script>
     <script>
-        $.ajax({
-            url: "actualite/getEvenementNumber",
-            success: function(result) {
-                let evenements= result.resultat;
-                for(let i=0; i<evenements.length; i++)
-                {
-                    ClassicEditor
-                        .create( document.querySelector( '#editor'+evenements[i].id_act) )
-                        .catch( error => {
-                            console.error( error );
-                        } );
-                }
-            },
-            error: function(error) {
-                console.log(error);
-            }
-        });
-    </script>
-    <script>
-        ClassicEditor
-            .create( document.querySelector( '#editorAdd' ) )
-            .catch( error => {
-                console.error( error );
-            } );
-    </script>
+      $.ajax({
+          url: "publication/allPublicationBusinessNumber",
+          success: function(result){
+            let pub=[...result];
+              for(let i=0; i<pub.length; i++)
+              {
+                  ClassicEditor
+                      .create( document.querySelector( '#editor'+pub[i]) )
+                      .catch( error => {
+                          console.error( error );
+                      } );
+              }
+          },
+          error: function(error) {
+              console.log(error);
+          }
+      });
+  </script>
 @endsection

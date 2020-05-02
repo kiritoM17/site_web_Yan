@@ -3,28 +3,35 @@
     Business
 @endsection
 @section('content-page')
+    @if(count($business)>0)
+    @foreach ($business as $pub)
+    @if ($pub->status_pub !== 'delete')
     <div class="row">
-        <div class="col-sm-4 col-xs-12 img-responsive">
-            <img src="{{url('img/clients/logo2.png')}}" class="img-responsive album" style="width: 100%; height: 200px;">
-        </div>
+        <a href="{{url('publication/getById/'.$pub->id_pub)}}">
+            <div class="col-sm-4 col-xs-12 img-responsive">
+                <img class="img-responsive thumbnail" src="@if(count($pub->albums->medias)>0){{asset('storage/'.$pub->albums->medias[0]->nom_media)}}@endif" style="width: 100% !important; height: 300px !important;">
+            </div>
+        </a>
         <div class="col-sm-8">
             <div class="row">
                 <div class="col-sm-12 center-block" style="float: none">
-                    <h4 style="font-family: 'Satisfy', cursive;border-bottom: 0px solid;margin-bottom: 0px;margin-bottom: 3%" class="text-center"> Le retour des rois</h4>
+                    <h4 style="font-family: 'Satisfy', cursive;border-bottom: 0px solid;margin-bottom: 0px;margin-bottom: 3%" class="text-center"> {!! $pub->title_pub!!}</h4>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-12 center-block description-act" style="font-size: 12px !important;">
-                    lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum vlorem ipsum
-                    lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum vlorem ipsum
-                    lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum vlorem ipsum
+                    {!! $pub->resume_pub!!}
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-4 floatright center-block">
-                    <p style="color:#973CB6 ;font-size:9px!important;"><span style="text-decoration: #973CB6 underline;font-weight: bold !important;">Publier le:</span>  22 Jan 2035</p>
+                    <p style="color:#fff ;font-size:9px!important;"><span style="text-decoration: #fff underline;font-weight: bold !important;">Publier le:</span>  {{ $pub->update_at->format('d-M-Y') }}</p>
                 </div>
             </div>
         </div>
     </div>
+    @endif
+    @endforeach
+    {{ $business->links() }}
+    @endif
 @endsection

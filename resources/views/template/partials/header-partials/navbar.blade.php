@@ -16,7 +16,7 @@
                 <li class="nav-item {{Route::is('communication')?'active':''}}"><a class="nav-link" href="{{route('communication')}}">MEDIA CITY</a></li>
                 <li class="nav-item {{Route::is('event')?'active':''}}"><a class="nav-link" href="{{route('event')}}" >EVENTS</a></li>
                 <li class="nav-item {{Route::is('business')?'active':''}}"><a class="nav-link" href="{{route('business')}}">BUSINESS</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">CONTACT</a></li>
+                <li class="nav-item {{Route::is('contact')?'active':''}}"><a class="nav-link" href="{{route('contact')}}">CONTACT</a></li>
                 
             </ul>
         </div>

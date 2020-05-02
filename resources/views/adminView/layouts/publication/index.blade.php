@@ -234,8 +234,8 @@
                         <h4 class="modal-title center-block" id="largeModalLabel" >CREATE FORM</h4>
                     </div>
                     <div class="modal-body">
-                        <form  method="POST" action="actualite/store" enctype="multipart/form-data">
-                            @include('adminView.layouts.actualite.partials.createEventForm')
+                        <form  method="POST" action="publication/store" enctype="multipart/form-data">
+                            @include('adminView.layouts.publication.partials.createEventForm')
                             <div class="modal-footer">
                                 <button type="submit" class="btn btn-link waves-effect btn-primary" style="color: whitesmoke !important">SAVE CHANGES</button>
                                 <button type="button" class="btn btn-link waves-effect btn-danger" style="color: whitesmoke !important" data-dismiss="modal">CLOSE</button>
@@ -253,6 +253,26 @@
     {{Html::script('adminTools/bsbmd/plugins/tinymce/tinymce.js')}}
     {{Html::script('adminTools/bsbmd/js/pages/profile.js')}}
     {{Html::script('adminTools/bsbmd/js/pages/forms/editors.js')}}
+    <script>
+      function personalizePublication()
+      {
+        let event=document.getElementById('event');
+        let formation=document.getElementById('formation');
+        let type_pub=document.getElementById('type_pub').value;
+        if(type_pub==1)
+        {
+          event.className='';
+          formation.className='hidden';
+        }else if(type_pub==2)
+        {
+          event.className='';
+          formation.className='';
+        }else{
+          event.className='hidden';
+          formation.className='hidden';
+        }
+      }
+    </script>
     <script>
         $(window).load(function() {
             $('.post-module').hover(function() {
