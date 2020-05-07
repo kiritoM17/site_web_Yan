@@ -1,27 +1,31 @@
 <div class="top">
-    <div class="container" style="width:100% !important">
-        <div class="row" style="padding-right:7%">
-            <div class="col-md-3 pull-left hidden-xs">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 pull-left hidden-xs top-img1-div">
                 <div class="row">
                     <div class="col-md-3 pull-left">
-                        <a class=" navbar-brand" href="#"><center><img src="{{url('img/logo.jpg')}}" alt="" width="100" height="52" /></center></a>
+                        <a class=" navbar-brand" href="#"><center><img src="{{ url('img/logo.png') }}" alt="" width="50" height="50"></center></a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-xs-12" style="padding:3% !important;">
+            <div class="col-md-6 col-xs-12" style="padding:0px !important;">
                 <div class="row">
-                    <div class="col-md-12 col-xs-12">
-                        <a class="navbar-brand" style="width:100%; border: 1px solid #fff !important;border-radius:100% !important" href="#"><center><img src="{{url('img/logo2.png')}}" alt="" width="160" height="72" style="float:none !important "/></center></a>
+                    <div class="col-md-12 col-xs-8 center-block center-content">
+                        <a class="navbar-brand" style="width:100%;" href="#">
+                            <center>
+                                <img class="eagle-div" src="{{ url('img/logo2.png') }}" alt="" width="250" height="240" >
+                            </center>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 pull-right hidden-xs">
+            <div class="col-md-3 pull-right hidden-xs top-img1-div">
                 <div class="row">
                     <div class="col-md-3 pull-right">
-                        <a class=" navbar-brand" href="#"><center><img src="{{url('img/logo1.png')}}" alt="" width="100" height="52" /></center></a>
+                        <a class=" navbar-brand" href="#"><center><img src="{{ url('img/logo1.png') }}" alt="" width="60" height="60"></center></a>
                     </div>
                 </div>
             </div>
         </div>
-    </d>
+    </div>
 </div>

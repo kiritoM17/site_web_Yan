@@ -19,51 +19,54 @@
 
 @if($pub->id_type_pub==1 || $pub->id_type_pub==2)
 <div class="row">
-    <div class="col-sm-4 col-xs-12 img-responsive">
-        <img class="img-responsive thumbnail" src="@if(count($pub->albums->medias)>0){{asset('storage/'.$pub->albums->medias[0]->nom_media)}}@endif" style="width: 100% !important; height: 300px !important;">
+    <div class="col-sm-12 col-md-4 col-lg-4 col-xs-12 img-responsive">
+        <img class="img-view thumbnail" src="@if(count($pub->albums->medias)>0){{asset('storage/'.$pub->albums->medias[0]->nom_media)}}@endif">
     </div>
-    <div class="col-sm-8">
+    <div class="col-sm-12 col-md-8 col-lg-8 col-xs-12" style="padding-left:30px !important">
         <div class="row">
             <div class="col-sm-12 center-block" style="float: none">
-                <h4 style="font-family: 'Satisfy', cursive;border-bottom: 0px solid;margin-bottom: 0px;margin-bottom: 3%" class="text-center"> {!! $pub->title_pub!!}</h4>
+                <h3 class="text-center"> {!! $pub->title_pub!!}</h3>
             </div>
         </div>
         <div class="row">
-            <p> <button class="btn btn-sm btn-danger">Theme :</button> {{$pub->theme_pub}}&nbsp;&nbsp; <span> Edition N {{$pub->edition_pub}}<span></p>
-
-            <p><button class="btn btn-sm btn-danger">To</button> {{$pub->start_date_pub->format('Y-M-d')}} <button class="btn btn-sm btn-danger">At</button> {{$pub->end_date_pub->format('Y-M-d')}} </p>
+            <div>
+                <button class="btn btn-sm btn-danger">Theme :</button> {{$pub->theme_pub}}&nbsp;&nbsp; <span> Edition N {{$pub->edition_pub}}<span>
+            </div>
+            <div>
+                <button class="btn btn-sm btn-danger">To</button> {{$pub->start_date_pub->format('Y-M-d')}} <button class="btn btn-sm btn-danger">At</button> {{$pub->end_date_pub->format('Y-M-d')}}
+            </div>
         </div>
         <div class="row">
-            <div class="col-sm-12 center-block description-act" style="font-size: 12px !important;">
+            <div class="col-sm-12 center-block description-act">
                 {!! $pub->description_pub!!}
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-4 floatright center-block">
-                <p style="color:#fff ;font-size:9px!important;"><span style="text-decoration: #fff underline;font-weight: bold !important;">Publier le:</span>  {{ $pub->update_at->format('d-M-Y') }}</p>
+            <div class="col-sm-5 floatright center-block">
+                <p><span >Publier le:</span>  {{ $pub->update_at->format('d-M-Y') }}</p>
             </div>
         </div>
     </div>
 </div>
 @else
 <div class="row">
-    <div class="col-sm-4 col-xs-12 img-responsive">
-        <img class="img-responsive thumbnail" src="@if(count($pub->albums->medias)>0){{asset('storage/'.$pub->albums->medias[0]->nom_media)}}@endif" style="width: 100% !important; height: 300px !important;">
+    <div class="col-sm-4 col-xs-12">
+        <img class="img-view thumbnail" src="@if(count($pub->albums->medias)>0){{asset('storage/'.$pub->albums->medias[0]->nom_media)}}@endif">
     </div>
     <div class="col-sm-8">
         <div class="row">
             <div class="col-sm-12 center-block" style="float: none">
-                <h4 style="font-family: 'Satisfy', cursive;border-bottom: 0px solid;margin-bottom: 0px;margin-bottom: 3%" class="text-center"> {!! $pub->title_pub!!}</h4>
+                <h3 class="text-center"> {!! $pub->title_pub!!}</h3>
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-12 center-block description-act" style="font-size: 12px !important;">
+            <div class="col-sm-12 center-block description-act">
                 {!! $pub->description_pub!!}
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-4 floatright center-block">
-                <p style="color:#fff ;font-size:9px!important;"><span style="text-decoration: #fff underline;font-weight: bold !important;">Publier le:</span>  {{ $pub->update_at->format('d-M-Y') }}</p>
+            <div class="col-sm-5 floatright center-block">
+                <p ><span >Publier le:</span>  {{ $pub->update_at->format('d-M-Y') }}</p>
             </div>
         </div>
     </div>
@@ -74,16 +77,16 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="card">
                     <div class="header align-center">
-                        <center><h2 style="color: #fff; border-bottom: #fff 1px solid;">Galery Photos</h2></center>
+                        <center><h3>Galery Photos</h3></center>
                     </div>
                     <div class="body">
                                 <div id="aniimated-thumbnials" class="list-unstyled row clearfix">
                                     @foreach($pub->albums->medias as $photo)
                                     @if($photo->mime_type=='image'||$photo->mime_type=='image/png')
-                                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 card">
-                                            <div class="card-body">
+                                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                            <div class="">
                                                 <a href="{{asset('storage/'.$photo->nom_media)}}" data-sub-html="IMAGE ANAFOR ">
-                                                    <img class="img-responsive thumbnail" src="{{asset('storage/'.$photo->nom_media)}}" style="width: 100% !important; height: 200px !important;">
+                                                   <center><img class="thumbnail" src="{{asset('storage/'.$photo->nom_media)}}" style="width: 200px !important; height: 200px !important;"></center>
                                                 </a>
                                             </div>
                                         </div>

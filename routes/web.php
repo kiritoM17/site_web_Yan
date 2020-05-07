@@ -10,6 +10,45 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/view-clear', function() {
+    $exitCode = Artisan::call('view:clear');
+    return '<h1>View cache cleared</h1>';
+});
+
+
+Route::get('/storage-link', function() {
+    $exitCode = Artisan::call('storage:link');
+    return '<h1>storage link</h1>';
+});
+Route::get('/cache-clear', function() {
+    $exitCode = Artisan::call('cache:clear');
+    return '<h1>cache cleared</h1>';
+});
+Route::get('/config-key', function() {
+    $exitCode = Artisan::call('key:generate');
+    return '<h1>cache key generated</h1>';
+});
+
+Route::get('/config-migrate', function() {
+    $exitCode = Artisan::call('migrate');
+    return '<h1>cache key generated</h1>';
+});
+
+Route::get('/config-serve', function() {
+    $exitCode = Artisan::call('serve');
+    return '<h1>cache key generated</h1>';
+});
+
+
+
+Route::get('/config-clear', function() {
+    $exitCode = Artisan::call('config:clear');
+    return '<h1>cache cleared</h1>';
+});
+Route::get('/config-cache', function() {
+    $exitCode = Artisan::call('config:cache');
+    return '<h1>config cache</h1>';
+});
 //auth service
 // Auth::routes();
 
@@ -86,6 +125,12 @@ Route::group(['prefix'=>'event'],function()
 Route::group(['prefix'=>'contact'],function()
 {
     Route::post('store','contactController@store');
+});
+
+Route::group(['prefix'=>'suscribe'],function()
+{
+    Route::post('storeMagazine','suscriberController@storeMagazine');
+    Route::post('storeBusiness','suscriberController@storeBusiness');
 });
 
 Route::group(['prefix'=>'actualite'],function()

@@ -11,7 +11,8 @@ class formationController extends Controller
     function getPage()
     {
         $formation = Publication::orderBy('id_pub','desc')->where('id_type_pub','=',2)->paginate(6);
-        return view('formation.formation',compact('formation'));
+        $lastMagazine = Publication::orderBy('id_pub','desc')->where('id_type_pub','=',3)->take(5)->get();
+        return view('formation.formation',compact('formation','lastMagazine'));
     }
     //function return formation admin index page
     function getAdminPage()

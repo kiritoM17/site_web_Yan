@@ -1,19 +1,8 @@
-/*
-    Theme Name: Sailor
-    Theme URL: https://bootstrapmade.com/sailor-free-bootstrap-theme/
-    Author: BootstrapMade
-    Author URL: https://bootstrapmade.com
-*/
+/* font for body element */
+@import url("https://fonts.googleapis.com/css2?family=Gentium+Book+Basic&display=swap");
+/*header element font*/
+@import url("https://fonts.googleapis.com/css2?family=Gentium+Book+Basic&family=Merienda:wght@700&display=swap");
 
-/* ==== Google font ==== */
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic,900|Open+Sans:300,400,600,700");
-
-/* === prettify === */
-@import url("../js/google-code-prettify/prettify.css");
-/* === fontawesome === */
-@import url("font-awesome.css");
-/* === custom icon === */
-@import url("custom-fonts.css");
 /* ==== overwrite bootstrap standard ==== */
 @import url("theme.css");
 @import url("animate.css");
@@ -54,13 +43,20 @@ h6 {
   width: 152px !important;
   margin-right: 3px !important;
   margin-left: 3px !important;
-  border-radius: 15px;
 }
 .car-img {
   width: 100% !important;
-  height: 300px !important;
+  height: 410px !important;
+  opacity: 0.5;
+  -webkit-box-shadow: -17px 15px 10px -17px rgba(255, 252, 255, 1);
+  -moz-box-shadow: -17px 15px 10px -17px rgba(255, 252, 255, 1);
+  box-shadow: -17px 15px 10px -17px rgba(255, 252, 255, 1);
 }
-
+header ul.nav {
+  -webkit-box-shadow: 4px 9px 19px -9px rgba(5, 4, 5, 1);
+  -moz-box-shadow: 4px 9px 19px -9px rgba(5, 4, 5, 1);
+  box-shadow: 4px 9px 19px -9px rgba(5, 4, 5, 1);
+}
 .nav-link {
   text-align: center;
   font-size: 13px !important;
@@ -172,10 +168,6 @@ header .top .row {
 header .top {
   padding: 1px 0;
   margin: 0;
-}
-
-header .top {
-  border-bottom: 1px solid #ddd;
 }
 
 header .top ul.topleft-info {
@@ -369,7 +361,9 @@ header .nav li.active ul.dropdown-menu li.active a {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-
+header .nav li.active a > h5 {
+  color: #e8486d;
+}
 header .navbar-default .navbar-nav > .open > a,
 header .navbar-default .navbar-nav > .open > a:hover,
 header .navbar-default .navbar-nav > .open > a:focus {
@@ -465,8 +459,8 @@ header ul.nav li a {
 }
 
 header ul.nav li {
-  border: 3px inset #ffffff;
-  margin: 3px !important;
+  border: 1px solid #ffffff;
+  margin: 5px !important;
   padding: 4px !important;
 }
 
@@ -478,9 +472,10 @@ header ul.nav li ul li a {
 }
 
 .navbar .nav > li > a,
-.navbar .nav > li.active > .dropdown-menu > li > a {
-  color: #f2f2f2;
+.navbar .nav > li.active > .dropdown-menu > li > a > h5 {
+  color: #6e1f2e;
   text-shadow: none;
+  padding-top: 12px;
 }
 
 .dropdown-menu li:hover,
@@ -500,9 +495,9 @@ header ul.nav li ul li a {
   font-weight: 700;
 }
 
-.navbar .nav > .active > a:active,
-.navbar .nav > .active > a:focus {
-  color: #6e1f2e;
+.navbar .nav > .active > a > h5:active,
+.navbar .nav > .active > a > h5:focus {
+  color: #6e1f2e !important;
   outline: 0;
   font-weight: 700;
 }
@@ -643,13 +638,17 @@ header ul.nav li ul li.dropdown-submenu li a {
 }
 .main-slider .flex-caption {
   bottom: 35px;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: #03083a;
   color: #fff;
   margin: 0;
   padding: 25px 25px 25px 30px;
   position: absolute;
   right: 0;
-  width: 295px;
+  width: 600px;
+  opacity: 0.8;
+  -webkit-box-shadow: -13px 14px 10px -17px rgba(255, 252, 255, 1);
+  -moz-box-shadow: -13px 14px 10px -17px rgba(255, 252, 255, 1);
+  box-shadow: -13px 14px 10px -17px rgba(255, 252, 255, 1);
 }
 .main-slider .flex-caption h3 {
   color: #fff;

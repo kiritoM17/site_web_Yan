@@ -10,8 +10,9 @@ class communicationController extends Controller
     //function return communication page
     function getPage()
     {
+        $lastMagazine = Publication::orderBy('id_pub','desc')->where('id_type_pub','=',3)->take(5)->get();
         $media_city = Publication::orderBy('id_pub','desc')->where('id_type_pub','=',1)->paginate(6);
-        return view('communication',compact('media_city'));
+        return view('communication',compact('media_city','lastMagazine'));
     }
     //function return communication admin index page
     function getAdminPage()

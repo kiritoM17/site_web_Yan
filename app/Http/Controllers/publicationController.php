@@ -202,8 +202,9 @@ class publicationController extends Controller
         return $tabEvent;
     }
     public function getById($id){
+        $lastMagazine = Publication::orderBy('id_pub','desc')->where('id_type_pub','=',3)->take(5)->get();
         $pub= Publication::find($id);
-        return view('details',compact('pub'));
+        return view('details',compact('pub','lastMagazine'));
     }
 
     public function getActualiteAdminById($id)

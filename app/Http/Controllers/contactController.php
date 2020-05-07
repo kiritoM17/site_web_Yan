@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\DB;
 use App\Models\Contact;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\NousContacter;
+use App\Mail\DemandeMembre;
+use App\Models\Publication;
 use Validator;
 
 class contactController extends Controller
@@ -14,7 +16,8 @@ class contactController extends Controller
     //get contact page
     public function getPage()
     {
-        return view('contact');
+        $lastMagazine = Publication::orderBy('id_pub','desc')->where('id_type_pub','=',3)->take(5)->get();
+        return view('contact',compact('lastMagazine'));
     }
     public function store(Request $request)
     {
@@ -34,14 +37,33 @@ class contactController extends Controller
                 'email_con' => $request->email_con,
                 'phone_con'=>$request->phone_con,
                'message_con' => $request->message_con,
+               'company_con' => $request->company_con,
+               'country_con' => $request->country_con,
              ]);
-             $contact =$request->except('_token');
-             Mail::to('mvemvearnoldjunior@gmail.com',$contact,function($message){
-                $message->from('mvemvearnoldjunior@gmail.com')
-                ->view('emails.nous-contacter')
-                ->subject('Contacter ANAFOR'.$this->contact['email_con']);
-            });
+             $contact=array(
+                'name_con' => $request->name_con,
+                'email_con' => $request->email_con,
+                'phone_con'=>$request->phone_con,
+               'message_con' => $request->message_con,
+               'company_con' => $request->company_con,
+                 'country_con' => $request->country_con
+             );
+            //  Mail::send('emails.demande-membre', $contact, function($message){
+            //     $message->to('mvemvearnoldjunior@gmail.com', 'Admin')
+            //     ->subject('Contact Admin');
+            //     $message->from('kiradevtest19@gmail.com',$contact);
+            //     });
+            // // //  
+            //  Mail::to('mvemvearnoldjunior@gmail.com')->send(new DemandeMembre($contactData));
+            Mail::to('mvemvearnoldjunior@gmail.com')->send(new DemandeMembre($request->except('_token')));
 
-             return redirect()->back();
+            //  Mail::to('mvemvearnoldjunior@gmail.com',$contact,function($message){
+            //     $message->from('mvemvearnoldjunior@gmail.com')
+            //     ->view('emails.demande-membre')
+            //     ->subject('Contact Us By'.$contact ['email_con']);
+            // });
+
+             $lastMagazine = Publication::orderBy('id_pub','desc')->where('id_type_pub','=',3)->take(5)->get();
+             return view('response',compact('lastMagazine'));
     }
 }

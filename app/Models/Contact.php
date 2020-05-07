@@ -15,7 +15,9 @@ class Contact extends Model
 		'name_con',
 		'email_con',
         'phone_con',
-        'message_con'
+		'message_con',
+		'company_con',
+		'country_con'
 	];
 
 }

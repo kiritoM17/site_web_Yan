@@ -10,7 +10,8 @@ class eventController extends Controller
     //function return Event page
     function getPage()
     {
-        return view('event');
+        $lastMagazine = Publication::orderBy('id_pub','desc')->where('id_type_pub','=',3)->take(5)->get();
+        return view('event',compact('lastMagazine'));
     }
     //function return event admin page
     function getAdminPage()

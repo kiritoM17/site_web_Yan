@@ -5,7 +5,8 @@
                 <h4 class="modal-title center-block" id="largeModalLabel" >ADD REGISTER DOCUMENT</h4>
             </div>
             <div class="modal-body">
-                <form id="frmFileUpload"  method="POST" enctype="multipart/form-data" class="dropzone" action="media/storeRegisterForm">
+                <form  method="post" enctype="multipart/form-data" class="dropzone" action="{{url('/media/storeRegisterForm')}}">
+                    @csrf
                     {{csrf_field()}}
                     <label for="email_address">{{$pub->albums->nom_album}}</label>
                     <div class="form-group">

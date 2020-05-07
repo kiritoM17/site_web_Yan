@@ -15,7 +15,7 @@ class DemandeMembre extends Mailable
  * Elements de demande
  * @var array
  */
- public $membre;
+ public $contact;
  /**
  * Create a new message instance.
  *
@@ -23,7 +23,7 @@ class DemandeMembre extends Mailable
  */
  public function __construct(Array $infos)
  {
- $this->membre = $infos;
+ $this->contact = $infos;
  }
 
 
@@ -34,7 +34,9 @@ class DemandeMembre extends Mailable
      */
     public function build()
     {
-            return $this->from('lesjaddes10@gamil.com')->view('emails.demande-membre')->subject('Demande-'.$this->membre['type_membre'].' - '.$this->membre ['email']);
-
+      
+        return $this->from('mvemvearnoldjunior@gamil.com')->view('emails.demande-membre',compact('contact'))->subject('Contact Us By');
+      
+            
     }
 }
