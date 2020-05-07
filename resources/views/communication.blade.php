@@ -21,7 +21,7 @@
         text-align: justify-all !important;
     }
     button {
-	color: #c00d0d !important;
+	color: #fff !important;
     width:150px !important;
 	border: 1px solid #fff !important;
 	padding: 20px;
@@ -40,14 +40,18 @@
 button>a{
     font-size: 18px !important;
 }
+button:hover a{
+    color:#c00d0d !important;
+}
 button:hover {
+    border:1px #c00d0d solid !important;
     color: #c00d0d !important;
-	-webkit-transform: scale(1.1);
-	    -ms-transform: scale(1.1);
-	        transform: scale(1.1);
+	-webkit-transform: scale(0.8);
+	    -ms-transform: scale(0.8);
+	        transform: scale(0.8);
 }
 button {
-	color: #c00d0d !important;
+	color: #fff !important;
     width:100px !important;
 	border: 1px solid #fff !important;
 	padding: 20px;
@@ -60,19 +64,25 @@ button {
 }
 button>a{
     font-size: 16px !important;
+    color:#fff;
 }
 </style>
 @endsection
 @section('content-page')
+<div class="row visible-xs">
+    <div class="col-md-12 col-lg-12" style="float: none">
+        <center><h3>AMAFOR MEDIA CITY</h3></center>
+    </div>
+</div>
 <div class="row actu-div">
     <p>&nbsp;&nbsp;&nbsp;&nbsp; It is an American center for foreign media connections. Radio, Television, Print and Social Media can have local representation in the USA, and can benefit from local and/or exclusive productions.</p>
     <p>&nbsp;&nbsp;&nbsp;&nbsp;American media also have the possibility to obtain foreign productions and to be represented in several European, African and Asian countries through our partners and collaborators in these continents.</p>
 </div>
 <div class="row">
-    <button data-toggle="modal" data-target="#exampleModal" class="btn btn-lg btn-md pull-right"style="background: none !important; border:3px solid #fff !important"><a style="color:#fff !important">Write us</a></button>
+    <button data-toggle="modal" data-target="#exampleModal" class="btn btn-lg btn-md pull-right"style="background: none !important"><a>Write us</a></button>
 </div>
 <div class="modal fade"   id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+    <div class="modal-dialog" role="document">
         <div class="modal-content" style="background: rgba(30, 40, 64, 1.0);
         background: -webkit-radial-gradient(bottom right, rgba(30, 40, 64, 1.0), rgba(79, 28, 36, 1.0));
         background: -moz-radial-gradient(bottom right, rgba(30, 40, 64, 1.0), rgba(79, 28, 36, 1.0));
@@ -137,7 +147,8 @@ button>a{
               </div>
             <div class="modal-footer">
                 <span class="input-group-btn">
-                    <button href="" type="submit" class="btn btn-form  display-4 form-control-label" style="color:#fff !important;background:none !important;border:3px solid !important;font-size:17px !important">Send</button>
+                    <button href="" data-dismiss="modal" type="button" class="btn btn-form  display-4 form-control-label" style="background:none !important;font-size:17px !important">Close</button>
+                    <button href="" type="submit" class="btn btn-form  display-4 form-control-label" style="background:none !important;font-size:17px !important">Send</button>
                 </span>
             </div>
         </form>

@@ -7,7 +7,7 @@
                 <div id="main-slider" class="main-slider flexslider">
                     <ul class="slides">
                         <li>
-                            <img src="{{url('img/parallax/2.jpeg')}}" alt="atlanta image" class="car-img"/>
+                            <img src="{{url('img/parallax/2.jpeg')}}" alt="atlanta image" height="500" class="car-img"/>
                             <div class="flex-caption">
                                 <h3>
                                     Event
@@ -19,7 +19,7 @@
                             </div>
                         </li>
                         <li>
-                            <img src="{{url('img/parallax/3.jpeg')}}" alt="atlanta image" class="car-img"/>
+                            <img height="500" src="{{url('img/parallax/3.jpeg')}}" alt="atlanta image" class="car-img"/>
                             <div class="flex-caption">
                                 <h3>
                                     Training
@@ -33,7 +33,7 @@
                             </div>
                         </li>
                         <li>
-                            <img src="{{url('img/parallax/4.jpeg')}}" alt="atlanta image" class="car-img"/>
+                            <img height="500" src="{{url('img/parallax/4.jpeg')}}" alt="atlanta image" class="car-img"/>
                             <div class="flex-caption">
                                 <h3>
                                     Announcement
@@ -46,7 +46,7 @@
                             </div>
                         </li>
                         <li>
-                            <img src="{{url('img/parallax/5.jpeg')}}" alt="atlanta image" class="car-img"/>
+                            <img height="500" src="{{url('img/parallax/5.jpeg')}}" alt="atlanta image" class="car-img"/>
                             <div class="flex-caption">
                                 <h3>
                                     AMAFOR MAGAZINE
@@ -56,13 +56,13 @@
                                     and digital versions. Here you will find world exclusives and the truths that the mainstream media do not
                                     tell. Available every 15 days (twice a month) in English and French by subscription.
                                 </p>
-                                <a href="{{ Route::is('formation')?'document/formation/formulaire_inscription.docx':'#' }}" target="_blanc" class="btn btn-theme">
+                                <a href="{{ Route::is('formation')?'document/formation/formulaire_inscription.docx':'#' }}" target="_blanc" class="btn btn-sm">
                                     subscription
                                 </a>
                             </div>
                         </li>
                         <li>
-                            <img src="{{url('img/parallax/6.jpeg')}}" alt="atlanta image" class="car-img"/>
+                            <img height="500" src="{{url('img/parallax/6.jpeg')}}" alt="atlanta image" class="car-img"/>
                             <div class="flex-caption">
                                 <h3>
                                     Urgent
@@ -74,7 +74,7 @@
                             </div>
                         </li>
                         <li>
-                            <img src="{{url('img/parallax/7.jpeg')}}" alt="atlanta image" class="car-img"/>
+                            <img height="500" src="{{url('img/parallax/7.jpeg')}}" alt="atlanta image" class="car-img"/>
                             <div class="flex-caption">
                                 <h3>
                                     {{Route::is('presentation')?'AMAFOR':'AMAFOR'}}
@@ -85,7 +85,7 @@
                             </div>
                         </li>
                         <li>
-                            <img src="{{url('img/parallax/8.jpeg')}}" alt="atlanta image" class="car-img"/>
+                            <img height="500" src="{{url('img/parallax/8.jpeg')}}" alt="atlanta image" class="car-img"/>
                             <div class="flex-caption">
                                 <h3>
                                     {{Route::is('presentation')?'AMAFOR':'AMAFOR'}}
@@ -96,7 +96,7 @@
                             </div>
                         </li>
                         <li>
-                            <img src="{{url('img/parallax/9.jpeg')}}" alt="atlanta image" class="car-img"/>
+                            <img height="500" src="{{url('img/parallax/9.jpeg')}}" alt="atlanta image" class="car-img"/>
                             <div class="flex-caption">
                                 <h3>
                                     {{Route::is('presentation')?'AMAFOR':'AMAFOR'}}
@@ -107,7 +107,7 @@
                             </div>
                         </li>
                         <li>
-                            <img src="{{url('img/parallax/10.jpeg')}}" alt="atlanta image" class="car-img"/>
+                            <img height="500" src="{{url('img/parallax/10.jpeg')}}" alt="atlanta image" class="car-img"/>
                             <div class="flex-caption">
                                 <h3> 
                                     {{Route::is('presentation')?'AMAFOR':'AMAFOR'}}

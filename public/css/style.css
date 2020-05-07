@@ -46,11 +46,7 @@ h6 {
 }
 .car-img {
   width: 100% !important;
-  height: 410px !important;
-  opacity: 0.5;
-  -webkit-box-shadow: -17px 15px 10px -17px rgba(255, 252, 255, 1);
-  -moz-box-shadow: -17px 15px 10px -17px rgba(255, 252, 255, 1);
-  box-shadow: -17px 15px 10px -17px rgba(255, 252, 255, 1);
+  opacity: 1;
 }
 header ul.nav {
   -webkit-box-shadow: 4px 9px 19px -9px rgba(5, 4, 5, 1);
@@ -340,7 +336,7 @@ header .navbar {
 }
 
 header .navbar-collapse ul.navbar-nav {
-  float: right;
+  float: none;
   margin-right: 0;
 }
 
@@ -459,7 +455,6 @@ header ul.nav li a {
 }
 
 header ul.nav li {
-  border: 1px solid #ffffff;
   margin: 5px !important;
   padding: 4px !important;
 }
@@ -644,7 +639,7 @@ header ul.nav li ul li.dropdown-submenu li a {
   padding: 25px 25px 25px 30px;
   position: absolute;
   right: 0;
-  width: 600px;
+  width: 350px;
   opacity: 0.8;
   -webkit-box-shadow: -13px 14px 10px -17px rgba(255, 252, 255, 1);
   -moz-box-shadow: -13px 14px 10px -17px rgba(255, 252, 255, 1);

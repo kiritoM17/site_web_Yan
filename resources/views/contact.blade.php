@@ -5,7 +5,7 @@
 @section('custom-css')
 <style>
     button {
-	color: #c00d0d !important;
+	color: #fff !important;
     width:150px !important;
 	border: 1px solid #fff !important;
 	padding: 20px;
@@ -24,14 +24,18 @@
 button>a{
     font-size: 18px !important;
 }
+button:hover a{
+    color:#c00d0d !important;
+}
 button:hover {
+    border:1px #c00d0d solid !important;
     color: #c00d0d !important;
-	-webkit-transform: scale(1.1);
-	    -ms-transform: scale(1.1);
-	        transform: scale(1.1);
+	-webkit-transform: scale(0.8);
+	    -ms-transform: scale(0.8);
+	        transform: scale(0.8);
 }
 button {
-	color: #c00d0d !important;
+	color: #fff !important;
     width:100px !important;
 	border: 1px solid #fff !important;
 	padding: 20px;
@@ -44,6 +48,7 @@ button {
 }
 button>a{
     font-size: 16px !important;
+    color:#fff;
 }
 </style>
 @endsection
@@ -55,7 +60,9 @@ background: -moz-radial-gradient(bottom right, rgba(30, 40, 64, 1.0), rgba(79, 2
 background: radial-gradient(to top left, rgba(30, 40, 64, 1.0), rgba(79, 28, 36, 1.0));float:none !important; padding:10px !important">
     <form class="mbr-form" action="contact/store" method="post" data-form-title="Mobirise Form">
         {{csrf_field()}}
-        <center><h2>Contact Us</h2><br/></center>
+        <div class="row container-justify">
+            <h2 style="text-align:center !important">Contact Us</h2>
+          </div>
         <div class="row row-sm-offset">
             <div class="col-md-4 multi-horizontal" data-for="name">
                 <div class="form-group">
@@ -82,7 +89,7 @@ background: radial-gradient(to top left, rgba(30, 40, 64, 1.0), rgba(79, 28, 36,
         </div>
     
         <span class="input-group-btn">
-            <button href="" type="submit" class="btn btn-form pull-right display-4 form-control-label" style="background:none !important;border:3px solid !important;font-size:16px !important;color:#fff !important"><a style="color:#fff !important">Send Email</a></button>
+            <button href="" type="submit" class="btn btn-form pull-right display-4 form-control-label" style="background:none !important;font-size:16px !important;"><a>Send Email</a></button>
         </span>
     </form>
 </div>

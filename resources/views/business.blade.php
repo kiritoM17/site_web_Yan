@@ -37,15 +37,16 @@
 }
 button>a{
     font-size: 18px !important;
+    color:#fff;
 }
 button:hover {
     color: #c00d0d !important;
-	-webkit-transform: scale(1.1);
-	    -ms-transform: scale(1.1);
-	        transform: scale(1.1);
+    border: 1px solid #c00d0d !important;
+	-webkit-transform: scale(0.8);
+	    -ms-transform: scale(0.8);
+	        transform: scale(0.8);
 }
 button {
-	color: #c00d0d !important;
     width:100px !important;
 	border: 1px solid #fff !important;
 	padding: 20px;
@@ -56,12 +57,17 @@ button {
     background: none;
 	border-radius: 12px;
 }
-button>a{
-    font-size: 16px !important;
+button:hover a{
+    color: #c00d0d !important;
 }
 </style>
 @endsection
 @section('content-page')
+<div class="row visible-xs">
+    <div class="col-md-12 col-lg-12" style="float: none">
+        <center><h3>AMAFOR BUSINESS</h3></center>
+    </div>
+</div>
    <div class="row actu-div" >
     <p>AMAFOR Marketing and Communication: AMC:</p>
     <p>This is a large marketing network based on the MLM system. The main activities here are:</p>
@@ -81,14 +87,13 @@ button>a{
     <p><strong><em>Take advantage of the promotions available to occupy very good positions.</em></strong></p>
    </div>
    <div class="row">
-       <button data-toggle="modal" data-target="#exampleModal" class="btn btn-lg btn-md pull-left" style="background: none !important; border:3px solid #fff !important"><a style="color:#fff !important">Subscribe</a></button>
-   
-       <button data-toggle="modal" data-target="#exampleModa" class="btn btn-lg btn-md pull-right"  style="background: none !important; border:3px solid #fff !important"><a style="color:#fff !important">Donwload</a></button>
+       <button data-toggle="modal" data-target="#exampleModal" class="btn btn-lg btn-md pull-left" style="background: none !important;"><a>Subscribe</a></button>
+       <button data-toggle="modal" data-target="#exampleModa" class="btn btn-lg btn-md pull-right"  style="background: none !important;"><a>Donwload</a></button>
    </div>
 
 
    <div class="modal fade"   id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-       <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+       <div class="modal-dialog" role="document">
            <div class="modal-content" style="background: rgba(30, 40, 64, 1.0);
            background: -webkit-radial-gradient(bottom right, rgba(30, 40, 64, 1.0), rgba(79, 28, 36, 1.0));
            background: -moz-radial-gradient(bottom right, rgba(30, 40, 64, 1.0), rgba(79, 28, 36, 1.0));
@@ -169,7 +174,8 @@ button>a{
                </div>
                <div class="modal-footer">
                 <span class="input-group-btn">
-                    <button href="" type="submit" class="btn btn-form  display-4 form-control-label" style="color:#fff !important;background:none !important;border:3px solid !important;font-size:17px !important">Subscribe</button>
+                    <button href="" data-dismiss="modal" type="button" class="btn btn-form  display-4 form-control-label" style="background:none !important;font-size:17px !important"><a>Close</a></button>
+                    <button href="" type="submit" class="btn btn-form  display-4 form-control-label" style="background:none !important;font-size:17px !important"><a>Subscribe</a></button>
                 </span>
                </div>
             </form>
@@ -180,7 +186,7 @@ button>a{
 
 
    <div class="modal fade"   id="exampleModa" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+    <div class="modal-dialog" role="document">
         <div class="modal-content" style="background: #01102C;
         background: -webkit-radial-gradient(bottom right, #01102C, #2B020A);
         background: -moz-radial-gradient(bottom right, #01102C, #2B020A);
@@ -193,7 +199,8 @@ button>a{
             </div>
             <div class="modal-footer">
              <span class="input-group-btn">
-                 <button href="" type="submit" class="btn btn-form  display-4 form-control-label" style="color:#fff !important;background:none !important;border:3px solid !important;font-size:17px !important"><a href="{{ url('document/business/table_commission.pdf') }}" style="color:#fff !important;">DOWNLOAD</a></button>
+                <button href="" data-dismiss="modal" type="button" class="btn btn-form  display-4 form-control-label" style="background:none !important;font-size:17px !important"><a>Close</a></button>
+                 <button href="" type="submit" class="btn btn-form  display-4 form-control-label" style="background:none !important;font-size:17px !important"><a href="{{ url('document/business/table_commission.pdf') }}">DOWNLOAD</a></button>
              </span>
             </div>
         </div>

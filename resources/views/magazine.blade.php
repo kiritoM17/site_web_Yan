@@ -5,18 +5,20 @@
 @section('custom-css')
 <style>
     .row>p{
-        text-align: justify !important;
-        font-size: 18px !important;
+        text-align: justify;
+  text-justify: inter-word;
+        font-size: 16px !important;
     }
     .text-div{
         padding-left:10px !important;
     }
     .actu-div>ul>li,.actu-div>p>strong,actu-div>p,.actu-div>ul>li>strong{
-        font-size: 18px !important;
-        text-align: justify-all !important;
+        font-size: 16px !important;
+        text-align: justify;
+  text-justify: inter-word;
     }
     button {
-	color: #c00d0d !important;
+	color: #fff !important;
     width:150px !important;
 	border: 1px solid #fff !important;
 	padding: 20px;
@@ -33,13 +35,11 @@
 	transition: 200ms ease-in-out;
 }
 button>a{
-    font-size: 18px !important;
+    color:#fff !important;
+    font-size: 16px !important;
 }
-button:hover {
+button:hover a{
     color: #c00d0d !important;
-	-webkit-transform: scale(1.1);
-	    -ms-transform: scale(1.1);
-	        transform: scale(1.1);
 }
 button {
 	color: #c00d0d !important;
@@ -55,9 +55,21 @@ button {
 button>a{
     font-size: 16px !important;
 }
+button:hover{
+    border: 1px  #c00d0d solid !important;
+    color: #c00d0d !important;
+    -webkit-transform: scale(0.8);
+	    -ms-transform: scale(0.8);
+	        transform: scale(0.8);
+}
 </style>
 @endsection
 @section('content-page')
+<div class="row visible-xs">
+    <div class="col-md-12 col-lg-12" style="float: none">
+        <center><h3>AMAFOR MAGAZINE</h3></center>
+    </div>
+</div>
 <div class="row actu-div">
     <p><strong>AMAFOR Magazine</strong> is:</p>
     <ul>
@@ -77,12 +89,12 @@ button>a{
     <p><strong><em>Until 31 May, take advantage of the free two-month subscription promotion. </em></strong></p>
 </div>
 <div class="row">
-    <button data-toggle="modal" data-target="#exampleModal" class="btn btn-lg btn-md pull-right"style="background: none !important; border:3px solid #fff !important"><a style="color:#fff !important">Subscription</a></button>
+    <button data-toggle="modal" data-target="#exampleModal" class="btn btn-site-red btn-lg btn-md pull-right"style="background: none !important;"><a >Subscription</a></button>
 </div>
 
 
 <div class="modal fade"   id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+    <div class="modal-dialog" role="document">
         <div class="modal-content" style="background: rgba(30, 40, 64, 1.0);
         background: -webkit-radial-gradient(bottom right, rgba(30, 40, 64, 1.0), rgba(79, 28, 36, 1.0));
         background: -moz-radial-gradient(bottom right, rgba(30, 40, 64, 1.0), rgba(79, 28, 36, 1.0));
@@ -160,7 +172,8 @@ button>a{
               </div>
             <div class="modal-footer">
                 <span class="input-group-btn">
-                    <button href="" type="submit" class="btn btn-form  display-4 form-control-label" style="color:#fff !important;background:none !important;border:3px solid !important;font-size:17px !important">Subscribe</button>
+                    <button href="" type="button" data-dismiss="modal" class="btn btn-form  display-4 form-control-label" style="background:none !important;border:3px solid !important;font-size:17px !important">Close</button>
+                    <button href="" type="submit" class="btn btn-form  display-4 form-control-label" style="background:none !important;border:3px solid !important;font-size:17px !important">Subscribe</button>
                 </span>
             </div>
         </form>

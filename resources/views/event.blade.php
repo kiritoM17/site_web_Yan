@@ -52,6 +52,11 @@ button>a{
     </style>
 @endsection
 @section('content-page')
+<div class="row visible-xs">
+    <div class="col-md-12 col-lg-12" style="float: none">
+        <center><h3>AMAFOR EVENT AGENDA</h3></center>
+    </div>
+</div>
     <div class="row">
         <div id='calendar'></div>
     </div>

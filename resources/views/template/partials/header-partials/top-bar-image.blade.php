@@ -1,10 +1,10 @@
 <div class="top">
     <div class="container">
-        <div class="row">
-            <div class="col-md-3 pull-left hidden-xs top-img1-div">
+        <div class="row hidden-xs">
+            <div class="col-md-3 pull-left hidden-sm top-img1-div">
                 <div class="row">
                     <div class="col-md-3 pull-left">
-                        <a class=" navbar-brand" href="#"><center><img src="{{ url('img/logo.png') }}" alt="" width="50" height="50"></center></a>
+                        <a class=" navbar-brand" href="#"><center><img src="{{ url('img/logo.png') }}" alt="" width="150" height="50"></center></a>
                     </div>
                 </div>
             </div>
@@ -19,10 +19,10 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 pull-right hidden-xs top-img1-div">
+            <div class="col-md-3 pull-right hidden-sm top-img1-div">
                 <div class="row">
                     <div class="col-md-3 pull-right">
-                        <a class=" navbar-brand" href="#"><center><img src="{{ url('img/logo1.png') }}" alt="" width="60" height="60"></center></a>
+                        <a class=" navbar-brand hidden" href="#"><center><img src="{{ url('img/logo1.png') }}" alt="" width="60" height="60"></center></a>
                     </div>
                 </div>
             </div>

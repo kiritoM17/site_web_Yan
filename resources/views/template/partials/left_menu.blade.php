@@ -1,7 +1,6 @@
-<div class="col-lg-4 col-md-4 col-sm-12 pull-left" style="padding: 1.5% !important;border-right: 4px outset #fff;border-radius: 0px 6px 0px 0px;-webkit-box-shadow: -8px 7px 15px -17px rgba(255,252,255,1);
--moz-box-shadow: -8px 7px 15px -17px rgba(255,252,255,1);
-box-shadow: -8px 7px 15px -17px rgba(255,252,255,1);">
-    <h3 class="widgetheading" style="text-justify: auto !important">Latest  Magazine Posts</h3>
+<div id="left-menu" class="col-lg-4 col-md-4 col-sm-12 pull-left" style="padding-left: 1.5% !important;padding-right: 1.5% !important;padding-top: 0px !important;">
+    <h3 style="text-align: justify;
+  text-justify: inter-word;padding-top:-100px!important;margin-top:0px !important">Latest  Magazine Posts</h3>
     <!-- contenu -->
     <ul class="recent">
         @if(count($lastMagazine)>0)
